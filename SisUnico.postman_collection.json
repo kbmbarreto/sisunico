@@ -1,0 +1,431 @@
+{
+	"info": {
+		"_postman_id": "9b476060-a990-4c00-b97e-b4ae3d305735",
+		"name": "SisUnico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "http://localhost:8000/sisunico/viewAllUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/sisunico/viewAllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sisunico",
+								"viewAllUsers"
+							]
+						},
+						"description": "Listar dados"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/sisunico/saveUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuariologin\": \"Teste\",\r\n    \"senhalogin\": \"Teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/sisunico/saveUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sisunico",
+								"saveUser"
+							]
+						},
+						"description": "Salvar dados"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/sisunico/deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idusuariologin",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/sisunico/deleteUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sisunico",
+								"deleteUser"
+							]
+						},
+						"description": "Deletar dados"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/sisunico/findUserid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idusuariologin",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/sisunico/findUserid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sisunico",
+								"findUserid"
+							]
+						},
+						"description": "Buscar dados por ID"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/sisunico/updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idusuariologin\": 3,\r\n    \"usuariologin\": \"Teste da Silva\",\r\n    \"senhalogin\": \"linkin2007\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/sisunico/updateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sisunico",
+								"updateUser"
+							]
+						},
+						"description": "Atualizar dados"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/sisunico/findByUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "usuariologin",
+									"value": "Teste",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/sisunico/findByUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sisunico",
+								"findByUser"
+							]
+						},
+						"description": "Pesquisar por nome"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MyAccess",
+			"item": [
+				{
+					"name": "http://localhost:8000/sisunico/viewAllSenhas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/sisunico/viewAllSenhas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sisunico",
+								"viewAllSenhas"
+							]
+						},
+						"description": "Listar dados"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/sisunico/saveSenha",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"descricao\": \"Clube do Hardware2\",\r\n        \"enderecovirtual\": \"https://www.clubedohardware.com.br\",\r\n        \"usuario\": \"hoshigaki-kisame\",\r\n        \"senha\": \"linkin2007\",\r\n        \"anotacoes\": \"Fórum de hardware\",\r\n        \"idusuariologin\": {\r\n        \"idusuariologin\": 3\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/sisunico/saveSenha",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sisunico",
+								"saveSenha"
+							]
+						},
+						"description": "Salvar dados"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/sisunico/deleteSenha",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idsenha",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/sisunico/deleteSenha",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sisunico",
+								"deleteSenha"
+							]
+						},
+						"description": "Deletar dados"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/sisunico/findSenhaid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idsenha",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/sisunico/findSenhaid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sisunico",
+								"findSenhaid"
+							]
+						},
+						"description": "Buscar dados por ID"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/sisunico/updateSenha",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"idsenha\": 2,\r\n        \"descricao\": \"Clube do Onga Bonga\",\r\n        \"enderecovirtual\": \"https://www.clubedohardware.com.br\",\r\n        \"usuario\": \"hoshigaki-kisame\",\r\n        \"senha\": \"linkin2007\",\r\n        \"anotacoes\": \"Fórum de hardware\",\r\n        \"idusuariologin\": {\r\n            \"idusuariologin\": 3\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/sisunico/updateSenha",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sisunico",
+								"updateSenha"
+							]
+						},
+						"description": "Atualizar dados"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/sisunico/findByDescricao",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "descricao",
+									"value": "Club",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/sisunico/findByDescricao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"sisunico",
+								"findByDescricao"
+							]
+						},
+						"description": "Pesquisar por nome"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

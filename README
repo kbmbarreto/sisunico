@@ -1,0 +1,33 @@
+=============================================== 
+=============================================== 
+*************** LEIA-ME PRIMEIRO **************
+=============================================== 
+-----------------------------------------------
+INFORMAÇÕES DO FICHEIRO
+-----------------------------------------------
+
+Sisunico *** Em desenvolvimento ***
+
+===============================================
+INFORMAÇÕES DOS ARQUIVOS
+-----------------------------------------------
+
+Springboot REST API com Java, Maven e MSSQL
+
+Sisunico - Um unico sistema com quatro módulos:
+
+  -> MyAccess: Controle de cadastro de senhas;
+  -> Sico: Controle de gerenciamento de horas 
+  de projeto em clientes;
+  -> MyCar: Controle de manutenção veicular;
+  -> MyRH: Controle de buscas de emprego
+
+=============================================== 
+INFORMAÇÕES DO AUTOR
+-----------------------------------------------
+KLEBER BARRETO - CSKMACEDO
+
+CONTATO: KLEBER.BARRETO@MSN.COM
+
+=============================================== 
+=============================================== 

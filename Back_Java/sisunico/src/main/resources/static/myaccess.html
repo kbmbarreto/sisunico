@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MyAccess - Sistema gerenciador de senhas</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <style type="text/css">
+        html {
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 2%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <center>
+        <h3>MyAccess - Sistema gerenciador de senhas</h3>
+    </center>
+
+    <form action="" id="formCadastroSenhas">
+
+        <div class="mb-3">
+            <label for="id" class="form-label">ID</label> <input type="text" class="form-control" id="id" readonly="readonly">
+        </div>
+
+        <div class="mb-3">
+            <label for="descricao" class="form-label">Descrição</label> <input type="text" class="form-control" id="descricao" placeholder="Nome do site ou serviço" required="required">
+        </div>
+
+        <div class="mb-3">
+            <label for="enderecovirtual" class="form-label">Endereço virtual</label> <input type="text" class="form-control" id="enderecovirtual">
+        </div>
+
+        <div class="mb-3">
+            <label for="usuario" class="form-label">Usuário</label> <input type="text" class="form-control" id="usuario" required="required">
+        </div>
+
+        <div class="mb-3">
+            <label for="senha" class="form-label">Senha</label> <input type="text" class="form-control" id="senha" required="required">
+        </div>
+
+        <div class="mb-3">
+            <label for="anotacoes" class="form-label">Informações adicionais</label> <input type="text" class="form-control" id="anotacoes">
+        </div>
+
+    </form>
+
+    <button type="button" class="btn btn-outline-success" onclick="salvarSenha()">Salvar</button>
+
+    <button type="button" class="btn btn-outline-secondary" onclick="document.getElementById('formCadastroSenhas').reset();">Novo</button>
+
+    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#pesquisaModal">Pesquisar</button>
+
+    <button type="button" class="btn btn-outline-danger" onclick="deletarDaTela()">Deletar</button>
+
+
+    <!-- MODAL PARA PESQUISA DE SENHAS -->
+
+    <div class="modal fade" id="pesquisaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Pesquisa de senhas
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nameBusca" class="col-form-label">Informe a
+								descrição:</label> <input type="text" class="form-control" id="descricaoBusca">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="pesquisarSenha()">Pesqssuisar</button>
+                    </form>
+
+                    <div style="height:300px; overflow: scroll;">
+                        <table class="table" id="tabelasenhas">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Descrição</th>
+                                    <th scope="col">Endereço Virtual</th>
+                                    <th scope="col">Usuário</th>
+                                    <th scope="col">Senha</th>
+                                    <th scope="col">Informações adicionais</th>
+                                    <th scope="col">Editar</th>
+                                    <th scope="col">Apagar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- Ajax JQuery -->
+    <!-- Esse name que está no campo data é o que vem do Controller, no metodo de buscarPorNome -->
+    <script type="text/javascript">
+        function deletarDaTela() {
+
+            var id = $('#id').val();
+
+            if (id != null && id.trim() != '') {
+                deleteSenha(id);
+
+                document.getElementById('formCadastroSenhas').reset();
+            }
+        }
+
+        function pesquisarSenha() {
+            var descricao = $('#descricaoBusca').val();
+
+            if (descricao != null && descricao.trim() != '') {
+
+                $.ajax({
+                    method: "GET",
+                    url: "findByDescricao",
+                    data: "descricao=" + descricao,
+                    success: function(response) {
+                    	console.log(response[0])
+                        $('#tabelasenhas > tbody > tr').remove();
+
+                        for (var i = 0; i < response.length; i++) {
+                            $('#tabelasenhas > tbody').append('<tr id="' + response[i].idsenha + '"><td>' + response[i].idsenha + '</td><td>' + response[i].descricao + '</td><td>' + response[i].enderecovirtual + '</td><td>' + response[i].usuario + '</td><td>' + response[i].senha + '</td><td>' + response[i].anotacoes + '</td><td><button type="button" onclick="colocarEmEdicao(' + response[i].id + ')" class="btn btn-outline-warning">Visualizar</button></td><td><button type="button" class="btn btn-outline-danger" onclick="deleteSenha(' + response[i].id + ')">Excluir</button></td></tr>')
+                        }
+                    }
+                }).fail(function(xhr, status, errorThrown) {
+                    alert("Erro ao buscar senha: " + xhr.responseText);
+                });
+            }
+        }
+
+        function colocarEmEdicao(id) {
+
+            $.ajax({
+                method: "GET",
+                url: "findSenhaId",
+                data: "idsenha=" + id,
+                success: function(response) {
+
+                    $("#idsenha").val(response.idsenha);
+                    $("#descricao").val(response.descricao);
+                    $("#enderecovirtual").val(response.enderecovirtual);
+                    $("#usuario").val(response.usuario);
+                    $("#senha").val(response.senha);
+                    $("anotacoes").val(response.anotacoes);
+
+                    $('#pesquisaModal').modal('hide');
+                }
+            }).fail(function(xhr, status, errorThrown) {
+                alert("Erro ao buscar senha por ID: " + xhr.responseText);
+            });
+        }
+
+        function deleteSenha(id) {
+
+            if (confirm('Deseja deletar o cadastro de código ' + id + '?')) {
+
+                $.ajax({
+                    method: "DELETE",
+                    url: "delete",
+                    data: "idsenha=" + idsenha,
+                    success: function(response) {
+
+                        $('#' + idsenha).remove();
+
+                        alert(response);
+                    }
+                }).fail(function(xhr, status, errorThrown) {
+                    alert("Erro ao deletar registro por ID: " + xhr.responseText);
+                });
+            }
+        }
+
+        function salvarSenha() {
+
+            var idsenha = $("#idsenha").val();
+            var descricao = $("#descricao").val();
+            var enderecovirtual = $("#enderecovirtual").val();
+            var usuario = $("#usuario").val();
+            var senha = $("#senha").val();
+            var anotacoes = $("#anotacoes").val();
+
+            if (descricao == null || descricao != null && descricao.trim() == '') {
+                $("#descricao").focus();
+                alert('Informe a descrição');
+                return;
+            }
+
+            if (enderecovirtual == null || enderecovirtual != null && enderecovirtual.trim() == '') {
+                $("#enderecovirtual").focus();
+                alert('Informe o site ou local onde a senha será usada');
+                return;
+            }
+
+            $.ajax({
+                method: "POST",
+                url: "saveSenha",
+                data: JSON.stringify({
+                    id: idsenha,
+                    descricao: descricao,
+                    enderecovirtual: enderecovirtual,
+                    usuario: usuario,
+                    senha: senha,
+                    anotacoes: anotacoes
+                }),
+                contentType: "application/json; charset-utf-8",
+                success: function(response) {
+
+                    $("#id").val(response.id);
+                    alert("Salvo com sucesso!");
+                }
+            }).fail(function(xhr, status, errorThrown) {
+                alert("Erro ao salvar senha: " + xhr.responseText);
+            })
+        }
+    </script>
+
+</body>
+
+</html>
