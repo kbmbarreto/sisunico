@@ -23,7 +23,7 @@ public class MycarVisitaTecnicaModel implements Serializable {
     @Column(name = "localordemservico", length = 128, columnDefinition = "VARCHAR(128)", nullable = true)
     private String localordemservico;
 
-    @Column(name = "cisitaconcluida", nullable = false)
+    @Column(name = "visitaconcluida", nullable = false)
     private boolean visitaconcluida;
 
     @ManyToOne(fetch = FetchType.LAZY)
