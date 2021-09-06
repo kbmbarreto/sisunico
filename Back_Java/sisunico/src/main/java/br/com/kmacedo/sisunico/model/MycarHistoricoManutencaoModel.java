@@ -14,13 +14,13 @@ public class MycarHistoricoManutencaoModel implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idhistoricomanutencao;
 
-    @Column(name = "km", columnDefinition = "DECIMAL(7,2)", nullable = false)
+    @Column(name = "km", columnDefinition = "DECIMAL(7,3)", nullable = false)
     private double km;
 
     @Column(name = "datamanutencao", nullable = false)
     private Date datamanutencao;
 
-    @Column(name = "kmproximatroca", columnDefinition = "DECIMAL(7,2)", nullable = true)
+    @Column(name = "kmproximatroca", columnDefinition = "DECIMAL(7,3)", nullable = true)
     private double kmproximatroca;
 
     @Column(name = "valor", columnDefinition = "DECIMAL(7,2)", nullable = true)
