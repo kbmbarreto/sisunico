@@ -10,6 +10,7 @@ import java.util.List;
 
 public interface MycarHistoricoManutencaoRepository extends JpaRepository<MycarHistoricoManutencaoModel, Long> {
 
+    //TODO -> Ajustar a query Historico de Manutencao
     @Query(value = "select h from MycarHistoricoManutencaoModel h")
     List<MycarHistoricoManutencaoModel> buscarPorData(Long idhistoricomanutencao);
 }
