@@ -28,11 +28,11 @@ public class MycarVisitaTecnicaModel implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idveiculo")
-    private MycarVeiculoModel idveiculo;
+    private MycarVeiculoModel descricaoveiculo;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idoficina")
-    private MycarOficinaModel idoficina;
+    private MycarOficinaModel oficina;
 
     public MycarVisitaTecnicaModel() {
 
@@ -78,19 +78,19 @@ public class MycarVisitaTecnicaModel implements Serializable {
         this.visitaconcluida = visitaconcluida;
     }
 
-    public MycarVeiculoModel getIdveiculo() {
-        return idveiculo;
+    public MycarVeiculoModel getDescricaoveiculo() {
+        return descricaoveiculo;
     }
 
-    public void setIdveiculo(MycarVeiculoModel idveiculo) {
-        this.idveiculo = idveiculo;
+    public void setDescricaoveiculo(MycarVeiculoModel descricaoveiculo) {
+        this.descricaoveiculo = descricaoveiculo;
     }
 
-    public MycarOficinaModel getIdoficina() {
-        return idoficina;
+    public MycarOficinaModel getOficina() {
+        return oficina;
     }
 
-    public void setIdoficina(MycarOficinaModel idoficina) {
-        this.idoficina = idoficina;
+    public void setOficina(MycarOficinaModel oficina) {
+        this.oficina = oficina;
     }
 }
