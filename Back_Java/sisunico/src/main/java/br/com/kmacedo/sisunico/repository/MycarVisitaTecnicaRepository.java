@@ -12,9 +12,9 @@ public interface MycarVisitaTecnicaRepository extends JpaRepository<MycarVisitaT
     List<MycarVisitaTecnicaModel> buscarPorDescricao(String descricaoagendamento);
 
     @Query(value = "select vt.idvisita, vt.agendamento, vt.descricaoagendamento, vt.localordemservico, " +
-            "vt.visitaconcluida, v.descricaoveiculo, of.oficina from MycarVisitaTecnicaModel vt" +
-            "inner join vt.descricaoveiculo v" +
-            "inner join vt.oficina of" +
+            "vt.visitaconcluida, vt.descricaoveiculo, vt.oficina from MycarVisitaTecnicaModel vt " +
+            "inner join vt.descricaoveiculo " +
+            "inner join vt.oficina " +
             "order by vt.idvisita desc")
     List<MycarVisitaTecnicaModel> exibirVisitasTecnicas(String visitastecnicas);
 }

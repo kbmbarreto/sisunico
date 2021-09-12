@@ -12,7 +12,7 @@ public interface MycarCompraRepository extends JpaRepository<MycarCompraModel, L
     List<MycarCompraModel> buscarPorDescricao(String descricaocompra);
 
     @Query(value = "select buy.idcompra, buy.descricaocompra, buy.localcupomfiscal, buy.quantidadecompra, " +
-            "buy.comprarealizada, comp.componente from MycarCompraModel buy" +
-            "inner join buy.componente comp")
+            "buy.comprarealizada, buy.componente from MycarCompraModel buy " +
+            "inner join buy.componente")
     List<MycarCompraModel> exibirCompra(String compras);
 }

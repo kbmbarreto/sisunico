@@ -12,7 +12,7 @@ public interface MycarVeiculoRepository extends JpaRepository<MycarVeiculoModel,
     List<MycarVeiculoModel> buscarPorDescricao(String descricaoveiculo);
 
     @Query(value = "select v.idveiculo, v.anomodelo, v.descricaoveiculo, v.modeloveiculo, " +
-            "f.fabricante from MycarVeiculoModel v" +
-            "inner join v.fabricante f")
+            "v.fabricante from MycarVeiculoModel v " +
+            "inner join v.fabricante")
     List<MycarVeiculoModel> exibirVeiculos(String veiculos);
 }

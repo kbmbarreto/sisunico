@@ -28,17 +28,93 @@ public class MycarHistoricoManutencaoModel implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idfabricante")
-    private MycarFabricanteModel idfabricante;
+    private MycarFabricanteModel fabricante;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idtipomanutencao")
-    private MycarTipoManutencaoModel idtipomanutencao;
+    private MycarTipoManutencaoModel tipomanutencao;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idcomponente")
-    private MycarComponenteModel idcomponente;
+    private MycarComponenteModel componente;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idveiculo")
-    private MycarVeiculoModel idveiculo;
+    private MycarVeiculoModel veiculodescricao;
+
+    public MycarHistoricoManutencaoModel() {
+
+    }
+
+    public int getIdhistoricomanutencao() {
+        return idhistoricomanutencao;
+    }
+
+    public void setIdhistoricomanutencao(int idhistoricomanutencao) {
+        this.idhistoricomanutencao = idhistoricomanutencao;
+    }
+
+    public double getKm() {
+        return km;
+    }
+
+    public void setKm(double km) {
+        this.km = km;
+    }
+
+    public Date getDatamanutencao() {
+        return datamanutencao;
+    }
+
+    public void setDatamanutencao(Date datamanutencao) {
+        this.datamanutencao = datamanutencao;
+    }
+
+    public double getKmproximatroca() {
+        return kmproximatroca;
+    }
+
+    public void setKmproximatroca(double kmproximatroca) {
+        this.kmproximatroca = kmproximatroca;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public MycarFabricanteModel getFabricante() {
+        return fabricante;
+    }
+
+    public void setFabricante(MycarFabricanteModel fabricante) {
+        this.fabricante = fabricante;
+    }
+
+    public MycarTipoManutencaoModel getTipomanutencao() {
+        return tipomanutencao;
+    }
+
+    public void setTipomanutencao(MycarTipoManutencaoModel tipomanutencao) {
+        this.tipomanutencao = tipomanutencao;
+    }
+
+    public MycarComponenteModel getComponente() {
+        return componente;
+    }
+
+    public void setComponente(MycarComponenteModel componente) {
+        this.componente = componente;
+    }
+
+    public MycarVeiculoModel getVeiculodescricao() {
+        return veiculodescricao;
+    }
+
+    public void setVeiculodescricao(MycarVeiculoModel veiculodescricao) {
+        this.veiculodescricao = veiculodescricao;
+    }
 }
