@@ -64,7 +64,7 @@ public class SenhasController {
 
 	@GetMapping(value = "findSenhaid")
 	@ResponseBody
-	public ResponseEntity<SenhasModel> buscarcargoid(@RequestParam(name = "idsenha") Long idsenha) {
+	public ResponseEntity<SenhasModel> buscarsenhaid(@RequestParam(name = "idsenha") Long idsenha) {
 	
 		SenhasModel senhas = senhasRepository.findById(idsenha).get();
 	
@@ -80,7 +80,6 @@ public class SenhasController {
     	List<SenhasModel> senhas = senhasRepository.findAll();
     	
     	return new ResponseEntity<List<SenhasModel>>(senhas, HttpStatus.OK);
-    	
     }
 	
 	/* MÉTODO PARA PESQUISAR POR DESCRIÇÃO */
