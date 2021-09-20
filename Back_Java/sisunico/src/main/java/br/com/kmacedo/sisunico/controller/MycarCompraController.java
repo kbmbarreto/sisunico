@@ -1,6 +1,5 @@
 package br.com.kmacedo.sisunico.controller;
 
-import br.com.kmacedo.sisunico.model.MycarComponenteModel;
 import br.com.kmacedo.sisunico.model.MycarCompraModel;
 import br.com.kmacedo.sisunico.repository.MycarCompraRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,7 +70,8 @@ public class MycarCompraController {
     @ResponseBody
     public ResponseEntity<List<MycarCompraModel>> listarTodosMycarCompra() {
 
-        List<MycarCompraModel> compra = mycarCompraRepository.exibirCompra();
+        //List<MycarCompraModel> compra = mycarCompraRepository.exibirCompra();
+        List<MycarCompraModel> compra = mycarCompraRepository.findAll();
 
         return new ResponseEntity<List<MycarCompraModel>>(compra, HttpStatus.OK);
     }
