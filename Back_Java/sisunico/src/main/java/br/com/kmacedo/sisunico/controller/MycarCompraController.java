@@ -5,10 +5,7 @@ import br.com.kmacedo.sisunico.repository.MycarCompraRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MycarCompraController {
@@ -29,5 +26,28 @@ public class MycarCompraController {
 
     //Método para atualizar a compra
 
+    @PutMapping(value = "editarMycarCompra")
+    @ResponseBody
+    public ResponseEntity<?> editarMycarCompra(@RequestBody MycarCompraModel mycarCompraModel) {
 
+        if (mycarCompraModel.getIdcompra() == 0) {
+
+            return new ResponseEntity<String>("O ID do cadastro não foi informado para a atualização!", HttpStatus.OK);
+        }
+
+        MycarCompraModel compra = mycarCompraRepository.saveAndFlush(mycarCompraModel);
+
+        return new ResponseEntity<MycarCompraModel>(compra, HttpStatus.OK);
+    }
+
+    //Método para excluir compra
+
+    @DeleteMapping(value = "excluirMycarCompra")
+    @ResponseBody
+    public ResponseEntity<String> excluirMycarCompra(@RequestParam Long idcompra) {
+
+        mycarCompraRepository.deleteById(idcompra);
+
+        return new ResponseEntity<String>("Registro excluído com sucesso!", HttpStatus.OK);
+    }
 }
