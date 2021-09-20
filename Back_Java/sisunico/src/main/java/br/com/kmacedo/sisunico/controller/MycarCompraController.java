@@ -1,11 +1,14 @@
 package br.com.kmacedo.sisunico.controller;
 
+import br.com.kmacedo.sisunico.model.MycarComponenteModel;
 import br.com.kmacedo.sisunico.model.MycarCompraModel;
 import br.com.kmacedo.sisunico.repository.MycarCompraRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class MycarCompraController {
@@ -49,5 +52,38 @@ public class MycarCompraController {
         mycarCompraRepository.deleteById(idcompra);
 
         return new ResponseEntity<String>("Registro excluído com sucesso!", HttpStatus.OK);
+    }
+
+    //Método para pesquisar por ID
+
+    @GetMapping(value = "pesquisarMycarCompraPorId")
+    @ResponseBody
+    public ResponseEntity<MycarCompraModel> pesquisarMycarCompraPorId(@RequestParam(name = "idcompra") Long idcompra) {
+
+        MycarCompraModel compra = mycarCompraRepository.findById(idcompra).get();
+
+        return new ResponseEntity<MycarCompraModel>(compra, HttpStatus.OK);
+    }
+
+    //Método para listar as compras
+
+    @GetMapping(value = "listarTodosMycarCompra")
+    @ResponseBody
+    public ResponseEntity<List<MycarCompraModel>> listarTodosMycarCompra() {
+
+        List<MycarCompraModel> compra = mycarCompraRepository.exibirCompra();
+
+        return new ResponseEntity<List<MycarCompraModel>>(compra, HttpStatus.OK);
+    }
+
+    //Método para listar por descricao
+
+    @GetMapping(value = "listarMycarCompraPorDescricao")
+    @ResponseBody
+    public ResponseEntity<List<MycarCompraModel>> listarMycarCompraPorCompra(@RequestParam(name = "compra") String compra) {
+
+        List<MycarCompraModel> mycarCompraModel = mycarCompraRepository.buscarPorDescricao(compra.trim().toUpperCase());
+
+        return new ResponseEntity<List<MycarCompraModel>>(mycarCompraModel, HttpStatus.OK);
     }
 }
