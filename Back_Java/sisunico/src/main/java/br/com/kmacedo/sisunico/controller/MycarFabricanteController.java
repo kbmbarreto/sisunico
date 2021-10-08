@@ -79,7 +79,7 @@ public class MycarFabricanteController {
 
     @GetMapping(value = "listarMycarFabricantePorFabricante")
     @ResponseBody
-    public ResponseEntity<List<MycarFabricanteModel>> listarMycarFabricantePorCompra(@RequestParam(name = "fabricante") String fabricante) {
+    public ResponseEntity<List<MycarFabricanteModel>> listarMycarFabricantePorFabricante(@RequestParam(name = "fabricante") String fabricante) {
 
         List<MycarFabricanteModel> mycarFabricanteModel = mycarFabricanteRepository.buscarPorFabricante(fabricante.trim().toUpperCase());
 
