@@ -12,7 +12,7 @@ public class MycarHistoricoManutencaoModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idhistoricomanutencao;
+    private long idhistoricomanutencao;
 
     @Column(name = "km", columnDefinition = "DECIMAL(7,3)", nullable = false)
     private double km;
@@ -46,11 +46,11 @@ public class MycarHistoricoManutencaoModel implements Serializable {
 
     }
 
-    public int getIdhistoricomanutencao() {
+    public long getIdhistoricomanutencao() {
         return idhistoricomanutencao;
     }
 
-    public void setIdhistoricomanutencao(int idhistoricomanutencao) {
+    public void setIdhistoricomanutencao(long idhistoricomanutencao) {
         this.idhistoricomanutencao = idhistoricomanutencao;
     }
 

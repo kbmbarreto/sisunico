@@ -80,10 +80,10 @@ public class MycarVeiculoController {
 
     @GetMapping(value = "listarMycarVeiculoPorDescricao")
     @ResponseBody
-    public ResponseEntity<List<MycarVeiculoModel>> listarMycarVeiculoPorDescricao(@RequestParam(name = "descricaoveiculo") String descricaoveiculo) {
+    public ResponseEntity<List<MycarVeiculoModel>> listarMycarVeiculoPorDescricao(@org.jetbrains.annotations.NotNull @RequestParam(name = "descricaoveiculo") String descricaoveiculo) {
 
-        List<MycarVeiculoModel> mycarVeiculoModel = mycarVeiculoRepository.buscarPorDescricao(descricaoveiculo.trim().toUpperCase());
+        List<MycarVeiculoModel> veiculo = mycarVeiculoRepository.buscarPorDescricao(descricaoveiculo.trim().toUpperCase());
 
-        return new ResponseEntity<List<MycarVeiculoModel>>(mycarVeiculoModel, HttpStatus.OK);
+        return new ResponseEntity<List<MycarVeiculoModel>>(veiculo, HttpStatus.OK);
     }
 }
