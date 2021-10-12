@@ -12,7 +12,7 @@ public class MycarVisitaTecnicaModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idvisita;
+    private long idvisita;
 
     @Column(name = "agendamento", nullable = true)
     private Date agendamento;
@@ -38,11 +38,11 @@ public class MycarVisitaTecnicaModel implements Serializable {
 
     }
 
-    public int getIdvisita() {
+    public long getIdvisita() {
         return idvisita;
     }
 
-    public void setIdvisita(int idvisita) {
+    public void setIdvisita(long idvisita) {
         this.idvisita = idvisita;
     }
 

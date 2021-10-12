@@ -12,7 +12,7 @@ public class MycarHistoricoManutencaoModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idhistoricomanutencao;
+    private long idhistoricomanutencao;
 
     @Column(name = "km", columnDefinition = "DECIMAL(7,3)", nullable = false)
     private double km;
@@ -41,4 +41,80 @@ public class MycarHistoricoManutencaoModel implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idveiculo")
     private MycarVeiculoModel idveiculo;
+
+    public MycarHistoricoManutencaoModel() {
+
+    }
+
+    public long getIdhistoricomanutencao() {
+        return idhistoricomanutencao;
+    }
+
+    public void setIdhistoricomanutencao(long idhistoricomanutencao) {
+        this.idhistoricomanutencao = idhistoricomanutencao;
+    }
+
+    public double getKm() {
+        return km;
+    }
+
+    public void setKm(double km) {
+        this.km = km;
+    }
+
+    public Date getDatamanutencao() {
+        return datamanutencao;
+    }
+
+    public void setDatamanutencao(Date datamanutencao) {
+        this.datamanutencao = datamanutencao;
+    }
+
+    public double getKmproximatroca() {
+        return kmproximatroca;
+    }
+
+    public void setKmproximatroca(double kmproximatroca) {
+        this.kmproximatroca = kmproximatroca;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public MycarFabricanteModel getIdfabricante() {
+        return idfabricante;
+    }
+
+    public void setIdfabricante(MycarFabricanteModel idfabricante) {
+        this.idfabricante = idfabricante;
+    }
+
+    public MycarTipoManutencaoModel getIdtipomanutencao() {
+        return idtipomanutencao;
+    }
+
+    public void setIdtipomanutencao(MycarTipoManutencaoModel idtipomanutencao) {
+        this.idtipomanutencao = idtipomanutencao;
+    }
+
+    public MycarComponenteModel getIdcomponente() {
+        return idcomponente;
+    }
+
+    public void setIdcomponente(MycarComponenteModel idcomponente) {
+        this.idcomponente = idcomponente;
+    }
+
+    public MycarVeiculoModel getIdveiculo() {
+        return idveiculo;
+    }
+
+    public void setIdveiculo(MycarVeiculoModel idveiculo) {
+        this.idveiculo = idveiculo;
+    }
 }
