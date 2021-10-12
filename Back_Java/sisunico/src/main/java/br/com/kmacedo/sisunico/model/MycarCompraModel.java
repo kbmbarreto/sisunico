@@ -27,7 +27,7 @@ public class MycarCompraModel implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idcomponente")
-    private MycarComponenteModel componente;
+    private MycarComponenteModel idcomponente;
 
     public MycarCompraModel() {
 
@@ -73,11 +73,11 @@ public class MycarCompraModel implements Serializable {
         this.comprarealizada = comprarealizada;
     }
 
-    public MycarComponenteModel getComponente() {
-        return componente;
+    public MycarComponenteModel getIdcomponente() {
+        return idcomponente;
     }
 
-    public void setComponente(MycarComponenteModel componente) {
-        this.componente = componente;
+    public void setIdcomponente(MycarComponenteModel idcomponente) {
+        this.idcomponente = idcomponente;
     }
 }

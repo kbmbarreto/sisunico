@@ -11,8 +11,8 @@ public interface MycarVeiculoRepository extends JpaRepository<MycarVeiculoModel,
     @Query(value = "select u from MycarVeiculoModel u where upper(trim(u.descricaoveiculo)) like %?1%")
     List<MycarVeiculoModel> buscarPorDescricao(String descricaoveiculo);
 
-    @Query(value = "select v.idveiculo, v.anomodelo, v.descricaoveiculo, v.modeloveiculo, " +
+    /* @Query(value = "select v.idveiculo, v.anomodelo, v.descricaoveiculo, v.modeloveiculo, " +
             "v.fabricante from MycarVeiculoModel v " +
             "inner join v.fabricante")
-    List<MycarVeiculoModel> exibirVeiculos(String veiculos);
+    List<MycarVeiculoModel> exibirVeiculos(String veiculos); */
 }

@@ -24,7 +24,7 @@ public class MycarVeiculoModel implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idfabricante")
-    private MycarFabricanteModel fabricante;
+    private MycarFabricanteModel idfabricante;
 
     public MycarVeiculoModel() {
 
@@ -62,11 +62,11 @@ public class MycarVeiculoModel implements Serializable {
         this.anomodelo = anomodelo;
     }
 
-    public MycarFabricanteModel getFabricante() {
-        return fabricante;
+    public MycarFabricanteModel getIdfabricante() {
+        return idfabricante;
     }
 
-    public void setFabricante(MycarFabricanteModel fabricante) {
-        this.fabricante = fabricante;
+    public void setIdfabricante(MycarFabricanteModel idfabricante) {
+        this.idfabricante = idfabricante;
     }
 }

@@ -80,9 +80,9 @@ public class MycarCompraController {
 
     @GetMapping(value = "listarMycarCompraPorDescricao")
     @ResponseBody
-    public ResponseEntity<List<MycarCompraModel>> listarMycarCompraPorCompra(@RequestParam(name = "compra") String compra) {
+    public ResponseEntity<List<MycarCompraModel>> listarMycarCompraPorCompra(@RequestParam(name = "descricaocompra") String descricaocompra) {
 
-        List<MycarCompraModel> mycarCompraModel = mycarCompraRepository.buscarPorDescricao(compra.trim().toUpperCase());
+        List<MycarCompraModel> mycarCompraModel = mycarCompraRepository.buscarPorDescricao(descricaocompra.trim().toUpperCase());
 
         return new ResponseEntity<List<MycarCompraModel>>(mycarCompraModel, HttpStatus.OK);
     }

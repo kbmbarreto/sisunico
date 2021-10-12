@@ -11,13 +11,13 @@ public interface MycarHistoricoManutencaoRepository extends JpaRepository<MycarH
     @Query(value = "select h from MycarHistoricoManutencaoModel h where upper(trim(h.datamanutencao)) like %?1%")
     List<MycarHistoricoManutencaoModel> buscarPorData(String datamanutencao);
 
-    @Query(value = "select hist.idhistoricomanutencao, hist.km, hist.datamanutencao, hist.kmproximatroca, " +
+    /* @Query(value = "select hist.idhistoricomanutencao, hist.km, hist.datamanutencao, hist.kmproximatroca, " +
             "hist.valor, hist.fabricante, hist.tipomanutencao, hist.componente, hist.veiculodescricao " +
             "from MycarHistoricoManutencaoModel hist " +
             "inner join hist.componente " +
             "inner join hist.fabricante " +
             "inner join hist.tipomanutencao " +
-            "inner join hist.veiculodescricao " +
+            "inner join hist.idveiculo " +
             "order by hist.idhistoricomanutencao desc")
-    List<MycarHistoricoManutencaoModel> exibirHistoricoManutencao(String historicomanutencao);
+    List<MycarHistoricoManutencaoModel> exibirHistoricoManutencao(String historicomanutencao); */
 }

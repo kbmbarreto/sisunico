@@ -12,7 +12,7 @@ public class MycarVisitaTecnicaModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idvisita;
+    private long idvisita;
 
     @Column(name = "agendamento", nullable = true)
     private Date agendamento;
@@ -28,21 +28,21 @@ public class MycarVisitaTecnicaModel implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idveiculo")
-    private MycarVeiculoModel descricaoveiculo;
+    private MycarVeiculoModel idveiculo;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idoficina")
-    private MycarOficinaModel oficina;
+    private MycarOficinaModel idoficina;
 
     public MycarVisitaTecnicaModel() {
 
     }
 
-    public int getIdvisita() {
+    public long getIdvisita() {
         return idvisita;
     }
 
-    public void setIdvisita(int idvisita) {
+    public void setIdvisita(long idvisita) {
         this.idvisita = idvisita;
     }
 
@@ -78,19 +78,19 @@ public class MycarVisitaTecnicaModel implements Serializable {
         this.visitaconcluida = visitaconcluida;
     }
 
-    public MycarVeiculoModel getDescricaoveiculo() {
-        return descricaoveiculo;
+    public MycarVeiculoModel getIdveiculo() {
+        return idveiculo;
     }
 
-    public void setDescricaoveiculo(MycarVeiculoModel descricaoveiculo) {
-        this.descricaoveiculo = descricaoveiculo;
+    public void setIdveiculo(MycarVeiculoModel idveiculo) {
+        this.idveiculo = idveiculo;
     }
 
-    public MycarOficinaModel getOficina() {
-        return oficina;
+    public MycarOficinaModel getIdoficina() {
+        return idoficina;
     }
 
-    public void setOficina(MycarOficinaModel oficina) {
-        this.oficina = oficina;
+    public void setIdoficina(MycarOficinaModel idoficina) {
+        this.idoficina = idoficina;
     }
 }

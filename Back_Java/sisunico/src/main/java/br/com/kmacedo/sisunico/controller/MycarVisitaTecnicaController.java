@@ -1,6 +1,5 @@
 package br.com.kmacedo.sisunico.controller;
 
-import br.com.kmacedo.sisunico.model.MycarComponenteModel;
 import br.com.kmacedo.sisunico.model.MycarVisitaTecnicaModel;
 import br.com.kmacedo.sisunico.repository.MycarVisitaTecnicaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,9 +59,9 @@ public class MycarVisitaTecnicaController {
     @ResponseBody
     public ResponseEntity<MycarVisitaTecnicaModel> pesquisarMycarVisitaTecnicaPorId(@RequestParam(name = "idvisita") Long idvisita) {
 
-        MycarVisitaTecnicaModel visita = mycarVisitaTecnicaRepository.findById(idvisita).get();
+        MycarVisitaTecnicaModel visitatecnica = mycarVisitaTecnicaRepository.findById(idvisita).get();
 
-        return new ResponseEntity<MycarVisitaTecnicaModel>(visita, HttpStatus.OK);
+        return new ResponseEntity<MycarVisitaTecnicaModel>(visitatecnica, HttpStatus.OK);
     }
 
     //Método para listar todsa as visitas
