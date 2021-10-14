@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "9b476060-a990-4c00-b97e-b4ae3d305735",
+		"_postman_id": "e786f2d0-903f-46bb-aa63-4bb3767c0f0f",
 		"name": "SisUnico",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -32,12 +32,7 @@
 									"type": "text",
 									"disabled": true
 								}
-							],
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							]
 						},
 						"url": {
 							"raw": "http://localhost:8000/sisunico/viewAllUsers",
@@ -243,12 +238,7 @@
 									"type": "text",
 									"disabled": true
 								}
-							],
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							]
 						},
 						"url": {
 							"raw": "http://localhost:8000/sisunico/viewAllSenhas",
@@ -273,7 +263,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \"descricao\": \"Clube do Hardware2\",\r\n        \"enderecovirtual\": \"https://www.clubedohardware.com.br\",\r\n        \"usuario\": \"hoshigaki-kisame\",\r\n        \"senha\": \"linkin2007\",\r\n        \"anotacoes\": \"Fórum de hardware\",\r\n        \"idusuariologin\": {\r\n        \"idusuariologin\": 3\r\n        }\r\n    }",
+							"raw": "    {\r\n        \"descricao\": \"Clube do Hardware2\",\r\n        \"enderecovirtual\": \"https://www.clubedohardware.com.br\",\r\n        \"usuario\": \"hoshigaki-kisame\",\r\n        \"senha\": \"linkin2007\",\r\n        \"anotacoes\": \"Fórum de hardware\",\r\n        \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n        }\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -404,7 +394,7 @@
 							"formdata": [
 								{
 									"key": "descricao",
-									"value": "Club",
+									"value": "Mercado livre",
 									"type": "text"
 								}
 							]
@@ -424,6 +414,1625 @@
 						"description": "Pesquisar por nome"
 					},
 					"response": []
+				}
+			]
+		},
+		{
+			"name": "MyCar",
+			"item": [
+				{
+					"name": "Componente",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMycarComponente",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMycarComponente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMycarComponente"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMycarComponente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"componente\": \"Manutenção de vitrificação\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMycarComponente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMycarComponente"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMycarComponente",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idcomponente",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMycarComponente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMycarComponente"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMycarComponentePorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idcomponente",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMycarComponentePorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMycarComponentePorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMycarComponente",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idcomponente\": 47,\r\n    \"componente\": \"Higienização do ar condicionado\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMycarComponente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMycarComponente"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/listarMycarComponentePorComponente",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "componente",
+											"value": "pastilha",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarMycarComponentePorComponente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarMycarComponentePorComponente"
+									]
+								},
+								"description": "Pesquisar por nome"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Compra",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMycarCompra",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMycarCompra",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMycarCompra"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMycarCompra",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descricaocompra\": \"Teste\",\r\n    \"localcupomfiscal\": \"/user/cskamcedo/comprovantes/comp1.pdf\",\r\n    \"quantidadecompra\": 2,\r\n    \"comprarealizada\": true,\r\n    \"idcomponente\": {\r\n    \"idcomponente\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMycarCompra",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMycarCompra"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMycarCompra",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idcompra",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMycarCompra",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMycarCompra"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMycarCompraPorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idcompra",
+											"value": "6",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMycarCompraPorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMycarCompraPorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMycarCompra",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idcompra\": 6,\r\n    \"descricaocompra\": \"Compra para teste\",\r\n    \"localcupomfiscal\": \"/user/cskamcedo/comprovantes/comp1.pdf\",\r\n    \"quantidadecompra\": 2,\r\n    \"comprarealizada\": true,\r\n    \"idcomponente\": {\r\n        \"idcomponente\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMycarCompra",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMycarCompra"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/listarMycarCompraPorDescricao",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "descricaocompra",
+											"value": "teste",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarMycarCompraPorDescricao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarMycarCompraPorDescricao"
+									]
+								},
+								"description": "Pesquisar por nome"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Fabricante",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMycarFabricante",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMycarFabricante",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMycarFabricante"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMycarFabricante",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fabricante\": \"Wega\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMycarFabricante",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMycarFabricante"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMycarFabricante",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idfabricante",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMycarFabricante",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMycarFabricante"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMycarFabricantePorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idfabricante",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMycarFabricantePorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMycarFabricantePorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMycarFabricante",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idfabricante\": 22,\r\n    \"fabricante\": \"Kidde\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMycarFabricante",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMycarFabricante"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/listarMycarFabricantePorFabricante",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fabricante",
+											"value": "Cobreq",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarMycarFabricantePorFabricante",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarMycarFabricantePorFabricante"
+									]
+								},
+								"description": "Pesquisar por nome"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "HistoricoManutencao",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMycarHistoricoManutencao",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMycarHistoricoManutencao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMycarHistoricoManutencao"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMycarHistoricoManutencao",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"km\": 60.716,\r\n    \"datamanutencao\": \"2012-09-22\",\r\n    \"kmproximatroca\": null,\r\n    \"valor\": 120.00,\r\n    \"idfabricante\": {\r\n        \"idfabricante\": 6\r\n    },\r\n    \"idtipomanutencao\": {\r\n        \"idtipomanutencao\": 2\r\n    },\r\n    \"idcomponente\": {\r\n        \"idcomponente\": 89\r\n    },\r\n    \"idveiculo\": {\r\n        \"idveiculo\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMycarHistoricoManutencao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMycarHistoricoManutencao"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMycarHistoricoManutencao",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idhistoricomanutencao",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMycarHistoricoManutencao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMycarHistoricoManutencao"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMycarHistoricoManutencaoPorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idhistoricomanutencao",
+											"value": "5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMycarHistoricoManutencaoPorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMycarHistoricoManutencaoPorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMycarHistoricoManutencao",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idhistoricomanutencao\": 4,\r\n    \"km\": 60.0,\r\n    \"datamanutencao\": \"2019-12-31\",\r\n    \"kmproximatroca\": 65.0,\r\n    \"valor\": 75.0,\r\n    \"idfabricante\": {\r\n        \"idfabricante\": 1\r\n    },\r\n    \"idtipomanutencao\": {\r\n        \"idtipomanutencao\": 2\r\n    },\r\n    \"idcomponente\": {\r\n        \"idcomponente\": 1\r\n    },\r\n    \"idveiculo\": {\r\n        \"idveiculo\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMycarHistoricoManutencao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMycarHistoricoManutencao"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Oficina",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMycarOficina",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMycarOficina",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMycarOficina"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMycarOficina",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"oficina\": \"Tapeçaria do Alemão\",\r\n    \"oficinaContato\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMycarOficina",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMycarOficina"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMycarOficina",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idoficina",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMycarOficina",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMycarOficina"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMycarOficinaPorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idoficina",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMycarOficinaPorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMycarOficinaPorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMycarOficina",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idoficina\": 1,\r\n    \"oficina\": \"Oficina do Tião\",\r\n    \"oficinaContato\": \"oficinadobotiao@bol.com.br\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMycarOficina",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMycarOficina"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/listarMycarOficinaPorOficina",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "oficina",
+											"value": "Oficina",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarMycarOficinaPorOficina",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarMycarOficinaPorOficina"
+									]
+								},
+								"description": "Pesquisar por nome"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TipoManutencao",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMycarTipoManutencao",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMycarTipoManutencao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMycarTipoManutencao"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMycarTipoManutencao",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tipomanutencao\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMycarTipoManutencao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMycarTipoManutencao"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMycarTipoManutencao",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idtipomanutencao",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMycarTipoManutencao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMycarTipoManutencao"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMycarTipoManutencaoPorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idtipomanutencao",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMycarTipoManutencaoPorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMycarTipoManutencaoPorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMycarTipoManutencao",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idtipomanutencao\": 4,\r\n    \"tipomanutencao\": \"Opcional\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMycarTipoManutencao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMycarTipoManutencao"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/listarMycarTipoManutencaoPorTipoManutencao",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "tipomanutencao",
+											"value": "preventiva",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarMycarTipoManutencaoPorTipoManutencao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarMycarTipoManutencaoPorTipoManutencao"
+									]
+								},
+								"description": "Pesquisar por nome"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Veiculo",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMycarVeiculo",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMycarVeiculo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMycarVeiculo"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMycarVeiculo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descricaoveiculo\": \"Civic 98\",\r\n    \"modeloveiculo\": \"Civic LX 1.6 Sedan gasolina\",\r\n    \"anomodelo\": 1998,\r\n    \"idfabricante\": {\r\n        \"idfabricante\": 17\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMycarVeiculo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMycarVeiculo"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMycarVeiculo",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idveiculo",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMycarVeiculo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMycarVeiculo"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMycarVeiculoPorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idveiculo",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMycarVeiculoPorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMycarVeiculoPorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMycarVeiculo",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idveiculo\": 1,\r\n    \"descricaoveiculo\": \"Civic 98 LX\",\r\n    \"modeloveiculo\": \"Civic LX\",\r\n    \"anomodelo\": 1998,\r\n    \"idfabricante\": {\r\n        \"idfabricante\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMycarVeiculo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMycarVeiculo"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/listarMycarVeiculoPorDescricao",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "descricaoveiculo",
+											"value": "Civic 98 LX",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarMycarVeiculoPorDescricao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarMycarVeiculoPorDescricao"
+									]
+								},
+								"description": "Pesquisar por nome"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "VisitaTecnica",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMycarVisitaTecnica",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMycarVisitaTecnica",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMycarVisitaTecnica"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMycarVisitaTecnica",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"agendamento\": \"2020-01-01\",\r\n    \"descricaoagendamento\": \"Revisão de 65.000 KM\",\r\n    \"localordemservico\": \"/users/cskmacedo/os/os0001.pdf\",\r\n    \"visitaconcluida\": true,\r\n    \"idveiculo\": {\r\n        \"idveiculo\": 1\r\n    },\r\n    \"idoficina\": {\r\n        \"idoficina\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMycarVisitaTecnica",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMycarVisitaTecnica"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMycarVisitaTecnica",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idvisita",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMycarVisitaTecnica",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMycarVisitaTecnica"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMycarVisitaTecnicaPorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idvisita",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMycarVisitaTecnicaPorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMycarVisitaTecnicaPorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMycarVisitaTecnica",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idvisita\": 5,\r\n    \"agendamento\": \"2020-01-01\",\r\n    \"descricaoagendamento\": \"Revisão de 65.000 KM\",\r\n    \"localordemservico\": \"/users/cskmacedo/os/os0001.pdf\",\r\n    \"visitaconcluida\": true,\r\n    \"idveiculo\": {\r\n        \"idveiculo\": 1\r\n    },\r\n    \"idoficina\": {\r\n        \"idoficina\": 2\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMycarVisitaTecnica",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMycarVisitaTecnica"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/listarMycarVisitaTecnicaPorDescricao",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "descricaoagendamento",
+											"value": "revisão",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarMycarVisitaTecnicaPorDescricao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarMycarVisitaTecnicaPorDescricao"
+									]
+								},
+								"description": "Pesquisar por nome"
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
