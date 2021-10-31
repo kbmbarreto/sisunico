@@ -75,7 +75,6 @@ public class MycarVeiculoController {
         return new ResponseEntity<List<MycarVeiculoModel>>(veiculo, HttpStatus.OK);
     }
 
-    //TODO-> AJUSTAR PESQUISA DE VEICULOS POR DESCRICAO
     //Método para listar por descricao
 
     @GetMapping(value = "listarMycarVeiculoPorDescricao")

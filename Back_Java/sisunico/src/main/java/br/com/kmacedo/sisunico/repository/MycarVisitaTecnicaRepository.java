@@ -11,10 +11,15 @@ public interface MycarVisitaTecnicaRepository extends JpaRepository<MycarVisitaT
     @Query(value = "select u from MycarVisitaTecnicaModel u where upper(trim(u.descricaoagendamento)) like %?1%")
     List<MycarVisitaTecnicaModel> buscarPorDescricao(String descricaoagendamento);
 
+    //TODO -> Implementar pesquisa para visualização na tabela
+
     /* @Query(value = "select vt.idvisita, vt.agendamento, vt.descricaoagendamento, vt.localordemservico, " +
             "vt.visitaconcluida, vt.descricaoveiculo, vt.oficina from MycarVisitaTecnicaModel vt " +
             "inner join vt.descricaoveiculo " +
             "inner join vt.oficina " +
             "order by vt.idvisita desc")
     List<MycarVisitaTecnicaModel> exibirVisitasTecnicas(String visitastecnicas); */
+
+    //TODO -> Implementar pesquisa por Descrição de agendamento
+
 }
