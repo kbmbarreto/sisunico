@@ -678,7 +678,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"descricaocompra\": \"Teste\",\r\n    \"localcupomfiscal\": \"/user/cskamcedo/comprovantes/comp1.pdf\",\r\n    \"quantidadecompra\": 2,\r\n    \"comprarealizada\": true,\r\n    \"idcomponente\": {\r\n    \"idcomponente\": 1\r\n    }\r\n}",
+									"raw": "{\r\n    \"descricaocompra\": \"Teste\",\r\n    \"localcupomfiscal\": \"/user/cskamcedo/comprovantes/comp1.pdf\",\r\n    \"quantidadecompra\": 2,\r\n    \"comprarealizada\": true,\r\n    \"idcomponente\": {\r\n    \"idcomponente\": 1\r\n    },\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -884,7 +884,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"fabricante\": \"Wega\"\r\n}",
+									"raw": "{\r\n    \"fabricante\": \"Hella\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1090,7 +1090,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"km\": 60.716,\r\n    \"datamanutencao\": \"2012-09-22\",\r\n    \"kmproximatroca\": null,\r\n    \"valor\": 120.00,\r\n    \"idfabricante\": {\r\n        \"idfabricante\": 6\r\n    },\r\n    \"idtipomanutencao\": {\r\n        \"idtipomanutencao\": 2\r\n    },\r\n    \"idcomponente\": {\r\n        \"idcomponente\": 89\r\n    },\r\n    \"idveiculo\": {\r\n        \"idveiculo\": 1\r\n    }\r\n}",
+									"raw": "{\r\n    \"km\": 60.716,\r\n    \"datamanutencao\": \"2012-09-22\",\r\n    \"kmproximatroca\": null,\r\n    \"valor\": 120.00,\r\n    \"idfabricante\": {\r\n        \"idfabricante\": 6\r\n    },\r\n    \"idtipomanutencao\": {\r\n        \"idtipomanutencao\": 2\r\n    },\r\n    \"idcomponente\": {\r\n        \"idcomponente\": 89\r\n    },\r\n    \"idveiculo\": {\r\n        \"idveiculo\": 1\r\n    },\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1262,7 +1262,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"oficina\": \"Tapeçaria do Alemão\",\r\n    \"oficinaContato\": null\r\n}",
+									"raw": "{\r\n    \"oficina\": \"Tapeçaria do Alemão\",\r\n    \"oficinaContato\": \"teste@teste.com.br\",\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1674,7 +1674,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"descricaoveiculo\": \"Civic 98\",\r\n    \"modeloveiculo\": \"Civic LX 1.6 Sedan gasolina\",\r\n    \"anomodelo\": 1998,\r\n    \"idfabricante\": {\r\n        \"idfabricante\": 17\r\n    }\r\n}",
+									"raw": "{\r\n    \"descricaoveiculo\": \"Civic 98\",\r\n    \"modeloveiculo\": \"Civic LX 1.6 Sedan gasolina\",\r\n    \"anomodelo\": 1998,\r\n    \"idfabricante\": {\r\n        \"idfabricante\": 1\r\n    },\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1880,7 +1880,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"agendamento\": \"2020-01-01\",\r\n    \"descricaoagendamento\": \"Revisão de 65.000 KM\",\r\n    \"localordemservico\": \"/users/cskmacedo/os/os0001.pdf\",\r\n    \"visitaconcluida\": true,\r\n    \"idveiculo\": {\r\n        \"idveiculo\": 1\r\n    },\r\n    \"idoficina\": {\r\n        \"idoficina\": 1\r\n    }\r\n}",
+									"raw": "{\r\n    \"agendamento\": \"2020-01-01\",\r\n    \"descricaoagendamento\": \"Revisão de 65.000 KM\",\r\n    \"localordemservico\": \"/users/cskmacedo/os/os0001.pdf\",\r\n    \"visitaconcluida\": true,\r\n    \"idveiculo\": {\r\n        \"idveiculo\": 1\r\n    },\r\n    \"idoficina\": {\r\n        \"idoficina\": 1\r\n    },\r\n        \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
