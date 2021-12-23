@@ -14,11 +14,9 @@ INFORMAÇÕES DOS ARQUIVOS
 
 Springboot REST API com Java, Maven e MSSQL
 
-Sisunico - Um unico sistema com quatro módulos:
+Sisunico - Um unico sistema com três módulos:
 
   -> MyAccess: Controle de cadastro de senhas;
-  -> Sico: Controle de gerenciamento de horas 
-  de projeto em clientes;
   -> MyCar: Controle de manutenção veicular;
   -> MyRH: Controle de buscas de emprego
 
