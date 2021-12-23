@@ -34,6 +34,10 @@ public class MycarVisitaTecnicaModel implements Serializable {
     @JoinColumn(name = "idoficina")
     private MycarOficinaModel idoficina;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idusuariologin")
+    private UsuariosModel idusuariologin;
+
     public MycarVisitaTecnicaModel() {
 
     }
@@ -92,5 +96,13 @@ public class MycarVisitaTecnicaModel implements Serializable {
 
     public void setIdoficina(MycarOficinaModel idoficina) {
         this.idoficina = idoficina;
+    }
+
+    public UsuariosModel getIdusuariologin() {
+        return idusuariologin;
+    }
+
+    public void setIdusuariologin(UsuariosModel idusuariologin) {
+        this.idusuariologin = idusuariologin;
     }
 }
