@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface MyrhEmpresaRepository extends JpaRepository<MyrhEmpresaRepository, Long> {
+public interface MyrhEmpresaRepository extends JpaRepository<MyrhEmpresaModel, Long> {
 
     @Query(value = "select u from MyrhEmpresaModel u where upper(trim(u.empresa)) like %?1%")
     List<MyrhEmpresaModel> buscarPorEmpresa(String empresa);

@@ -72,9 +72,7 @@ public class MyrhCandidaturaModel implements Serializable {
         this.anotacoes = anotacoes;
     }
 
-    public MyrhEmpresaModel getIdempresa() {
-        return idempresa;
-    }
+    public MyrhEmpresaModel getIdempresa() { return idempresa; }
 
     public void setIdempresa(MyrhEmpresaModel idempresa) {
         this.idempresa = idempresa;
