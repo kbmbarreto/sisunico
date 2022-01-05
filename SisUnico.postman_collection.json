@@ -2035,6 +2035,1247 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "MyRH",
+			"item": [
+				{
+					"name": "Candidatura",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMyrhCandidatura",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMyrhCandidatura",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMyrhCandidatura"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMyrhCandidatura",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": \"2021-01-30\",\r\n    \"anotacoes\": \"Teste\",\r\n    \"idempresa\": {\r\n        \"idempresa\": 1\r\n    },\r\n    \"idcargo\": {\r\n        \"idcargo\": 1\r\n    },\r\n    \"plataforma\": {\r\n        \"idplataforma\": 1\r\n    },\r\n    \"idrecrutador\": {\r\n        \"idrecrutador\": 1\r\n    },\r\n    \"idsituacao\": {\r\n        \"idsituacao\": 1\r\n    },\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMyrhCandidatura",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMyrhCandidatura"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMyrhCandidatura",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idcandidatura",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMyrhCandidatura",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMyrhCandidatura"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMyrhCandidaturaPorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idcandidatura",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMyrhCandidaturaPorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMyrhCandidaturaPorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMyrhCandidatura",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idcandidatura\": 1,\r\n    \"data\": \"2021-01-25\",\r\n    \"anotacoes\": \"Teste\",\r\n    \"idempresa\": {\r\n        \"idempresa\": 1\r\n    },\r\n    \"idcargo\": {\r\n        \"idcargo\": 1\r\n    },\r\n    \"plataforma\": {\r\n        \"idplataforma\": 1\r\n    },\r\n    \"idrecrutador\": {\r\n        \"idrecrutador\": 1\r\n    },\r\n    \"idsituacao\": {\r\n        \"idsituacao\": 1\r\n    },\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMyrhCandidatura",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMyrhCandidatura"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/listarMyrhCandidaturaPorAnotacao",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "anotacoes",
+											"value": "Teste",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarMyrhCandidaturaPorAnotacao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarMyrhCandidaturaPorAnotacao"
+									]
+								},
+								"description": "Pesquisar por nome"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cargo",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMyrhCargo",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMyrhCargo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMyrhCargo"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMyrhCargo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cargo\": \"Teste\",\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMyrhCargo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMyrhCargo"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMyrhCargo",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idcargo",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMyrhCargo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMyrhCargo"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMyrhCargoPorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idcargo",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMyrhCargoPorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMyrhCargoPorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMyrhCargo",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idcargo\": 1,\r\n    \"cargo\": \"Teste\",\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMyrhCargo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMyrhCargo"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/listarMyrhCargoPorCargo",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "cargo",
+											"value": "teste",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarMyrhCargoPorCargo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarMyrhCargoPorCargo"
+									]
+								},
+								"description": "Pesquisar por nome"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Empresa",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMyrhEmpresa",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMyrhEmpresa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMyrhEmpresa"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMyrhEmpresa",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empresa\": \"Teste\",\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMyrhEmpresa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMyrhEmpresa"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMyrhEmpresa",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idempresa",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMyrhEmpresa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMyrhEmpresa"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMyrhEmpresaPorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idempresa",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMyrhEmpresaPorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMyrhEmpresaPorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMyrhEmpresa",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idempresa\": 1,\r\n    \"empresa\": \"Teste\",\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMyrhEmpresa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMyrhEmpresa"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/listarMyrhEmpresaPorEmpresa",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "empresa",
+											"value": "teste",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarMyrhEmpresaPorEmpresa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarMyrhEmpresaPorEmpresa"
+									]
+								},
+								"description": "Pesquisar por nome"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Plataforma",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMyrhPlataforma",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMyrhPlataforma",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMyrhPlataforma"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMyrhPlataforma",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"plataforma\": \"Teste\",\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMyrhPlataforma",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMyrhPlataforma"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMyrhPlataforma",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idplataforma",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMyrhPlataforma",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMyrhPlataforma"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMyrhPlataformaPorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idplataforma",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMyrhPlataformaPorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMyrhPlataformaPorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMyrhPlataforma",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idplataforma\": 1,\r\n    \"plataforma\": \"Teste\",\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMyrhPlataforma",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMyrhPlataforma"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/listarMyrhPlataformaPorPlataforma",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "plataforma",
+											"value": "teste",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarMyrhPlataformaPorPlataforma",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarMyrhPlataformaPorPlataforma"
+									]
+								},
+								"description": "Pesquisar por nome"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Recrutador",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMyrhRecrutador",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMyrhRecrutador",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMyrhRecrutador"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMyrhRecrutador",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"datacontato\": \"2021-01-30\",\r\n    \"nome\": \"Teste da Silva\",\r\n    \"telefone\": \"(11) 97111-1111\",\r\n    \"email\": \"teste@teste.com\",\r\n    \"idempresa\": {\r\n        \"idempresa\": 1\r\n    },\r\n    \"idcargo\": {\r\n        \"idcargo\": 1\r\n    },\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMyrhRecrutador",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMyrhRecrutador"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMyrhRecrutador",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idrecrutador",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMyrhRecrutador",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMyrhRecrutador"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMyrhRecrutadorPorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idrecrutador",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMyrhRecrutadorPorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMyrhRecrutadorPorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMyrhRecrutador",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idrecrutador\": 1,\r\n    \"datacontato\": \"2021-01-30\",\r\n    \"nome\": \"Teste da Silva\",\r\n    \"telefone\": \"(11) 97111-1111\",\r\n    \"email\": \"teste@teste.com\",\r\n    \"idempresa\": {\r\n        \"idempresa\": 1\r\n    },\r\n    \"idcargo\": {\r\n        \"idcargo\": 1\r\n    },\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMyrhRecrutador",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMyrhRecrutador"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/listarMyrhRecrutadorPorNome",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "Teste",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarMyrhRecrutadorPorNome",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarMyrhRecrutadorPorNome"
+									]
+								},
+								"description": "Pesquisar por nome"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Situacao",
+					"item": [
+						{
+							"name": "http://localhost:8000/sisunico/listarTodosMyrhSituacao",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarTodosMyrhSituacao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarTodosMyrhSituacao"
+									]
+								},
+								"description": "Listar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/salvarMyrhSituacao",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"situacao\": \"Teste\",\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/salvarMyrhSituacao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"salvarMyrhSituacao"
+									]
+								},
+								"description": "Salvar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/excluirMyrhSituacao",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idsituacao",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/excluirMyrhSituacao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"excluirMyrhSituacao"
+									]
+								},
+								"description": "Deletar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/pesquisarMyrhSituacaoPorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idsituacao",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/pesquisarMyrhSituacaoPorId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"pesquisarMyrhSituacaoPorId"
+									]
+								},
+								"description": "Buscar dados por ID"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/editarMyrhSituacao",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idsituacao\": 1,\r\n    \"situacao\": \"Teste\",\r\n    \"idusuariologin\": {\r\n        \"idusuariologin\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/editarMyrhSituacao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"editarMyrhSituacao"
+									]
+								},
+								"description": "Atualizar dados"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8000/sisunico/listarMyrhSituacaoPorSituacao",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "situacao",
+											"value": "teste",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/sisunico/listarMyrhSituacaoPorSituacao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"sisunico",
+										"listarMyrhSituacaoPorSituacao"
+									]
+								},
+								"description": "Pesquisar por nome"
+							},
+							"response": []
+						}
+					]
+				}
+			]
 		}
 	]
 }
