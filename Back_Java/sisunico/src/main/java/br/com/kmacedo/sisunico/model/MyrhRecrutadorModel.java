@@ -35,6 +35,10 @@ public class MyrhRecrutadorModel implements Serializable {
     private MyrhCargoModel idcargo;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idplataforma")
+    private MyrhPlataformaModel idplataforma;
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idusuariologin")
     private UsuariosModel idusuariologin;
 
@@ -88,6 +92,14 @@ public class MyrhRecrutadorModel implements Serializable {
 
     public void setIdempresa(MyrhEmpresaModel idempresa) {
         this.idempresa = idempresa;
+    }
+
+    public MyrhPlataformaModel getIdplataforma() {
+        return idplataforma;
+    }
+
+    public void setIdplataforma(MyrhPlataformaModel idplataforma) {
+        this.idplataforma = idplataforma;
     }
 
     public MyrhCargoModel getIdcargo() {
